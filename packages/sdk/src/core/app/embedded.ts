@@ -1,4 +1,4 @@
-import { type EventRequestDTO, EventType, type MessageEventResp } from './messages/types'
+import {type EventRequestDTO, EventType, type MessageEventResp} from './messages/types'
 
 export interface EmbeddedConfiguration {
     defaultURL: string
@@ -36,11 +36,7 @@ export default abstract class Embedded {
                 }
                 if (event.data.type === EventType.CLOSE_DISPLAY) {
                     window.removeEventListener('message', handler)
-                    reject({
-                        type,
-                        data: { message: 'User terminated the flow by closing the modal.' },
-                        success: false
-                    })
+                    reject({message: 'User unexpectedly closed the flow.'})
                 }
             }
             window.addEventListener('message', handler)

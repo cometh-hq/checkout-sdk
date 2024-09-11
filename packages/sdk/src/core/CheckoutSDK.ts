@@ -31,13 +31,16 @@ export default class CheckoutSDK extends CheckoutEventEmitter {
             )
             this.emit(CheckoutEvents.SUCCESS, {
                 transactionId: response.transactionId,
+                txHash: response.txHash,
                 status: TransactionStatus.COMPLETED
             })
         } catch (e: any) {
             console.error(e)
             this.emit(CheckoutEvents.FAILURE, {
+                transactionId: e.transactionId,
+                txHash: e.txHash,
                 message: e.message,
-                status: e.status
+                status: e.status || TransactionStatus.CANCELLED,
             })
         }
     }

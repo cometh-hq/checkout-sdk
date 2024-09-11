@@ -9,12 +9,15 @@ export enum CheckoutEvents {
 
 export interface CheckoutSuccess {
     transactionId: string
+    txHash: string
     status: TransactionStatus
 }
 
 export interface CheckoutError {
     message: string
-    status?: TransactionStatus
+    transactionId?: string
+    txHash?: string
+    status: TransactionStatus
 }
 
 type CheckoutEventMap = {

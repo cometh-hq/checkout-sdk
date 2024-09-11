@@ -6,6 +6,7 @@ export interface ResponseErrorDTO {
 
 export interface ResponseCheckoutTransactionDTO {
     transactionId: string
+    txHash: string
 }
 
 export interface EventResponseDTO {
