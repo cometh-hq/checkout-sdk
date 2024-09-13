@@ -3,9 +3,9 @@ import Embedded from './embedded'
 import {buildURL} from '@/utils/safeURLBuilder'
 
 export default class IFrame extends Embedded {
-    private _modalID = 'modal-cometh-web-auth'
+    private _modalID = 'modal-cometh-web-checkout'
     private _modal: HTMLElement | null = null
-    private _iframeID = 'cometh-web-auth'
+    private _iframeID = 'cometh-web-checkout'
     private _iframe: HTMLIFrameElement | null = null
 
     private _prepareModal(modalId: string) {
@@ -41,9 +41,13 @@ export default class IFrame extends Embedded {
             this._iframe = existingIframe as HTMLIFrameElement
             return
         }
+        console.log('Creating iframe', this._modal)
         const iframe = document.createElement('iframe')
         iframe.id = this._iframeID
         iframe.allow = ''
+        iframe.sandbox.add('allow-forms')
+        iframe.sandbox.add('allow-scripts')
+        iframe.sandbox.add('allow-same-origin')
         iframe.style.width = '100%'
         iframe.style.height = '100%'
         this._iframe = iframe

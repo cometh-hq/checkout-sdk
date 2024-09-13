@@ -7,5 +7,6 @@ export enum DisplayMode {
 
 export interface CheckoutConfiguration {
     checkoutAppURI?: string
+    checkoutApiURI?: string
     display?: DisplayMode
 }

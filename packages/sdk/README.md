@@ -33,16 +33,16 @@ await sdk.checkout(request)
 3. Handle flow events
 
 ```ts
-import {CheckoutSDK, CheckoutError, CheckoutSuccess} from '@cometh/checkout-sdk'
+import {CheckoutSDK, CheckoutError, CheckoutSuccess, CheckoutEvents} from '@cometh/checkout-sdk'
 
 const sdk = new CheckoutSDK(apiKey)
-sdk.on('start', () => {
+sdk.on(CheckoutEvents.START, () => {
     console.log('display is ON and flow has started');
 });
 
-sdk.on('success', (result: CheckoutSuccess) => {
+sdk.on(CheckoutEvents.SUCCESS, (result: CheckoutSuccess) => {
 });
 
-sdk.on('failure', (error: CheckoutError) => {
+sdk.on(CheckoutEvents.FAILURE, (error: CheckoutError) => {
 });
 ```

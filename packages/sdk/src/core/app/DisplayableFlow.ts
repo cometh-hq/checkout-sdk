@@ -4,7 +4,6 @@ import embeddedFactory from '@/core/app/factory'
 import {DisplayMode} from '@/configuration'
 import {EventType,} from '@/core/app/messages/types'
 import type {FlowParameters} from "@/core/app/types";
-import {CHECKOUT_API_URI} from "@/constants";
 
 export default class DisplayableFlow {
     private _embedded: Embedded
@@ -18,8 +17,7 @@ export default class DisplayableFlow {
         this._embedded.open(undefined, {
             product_id: parameters.productId,
             user_wallet: parameters.user.walletAddress,
-            user_email: parameters.user.email,
-            checkout_api_url: CHECKOUT_API_URI
+            user_email: parameters.user.email
         })
     }
 

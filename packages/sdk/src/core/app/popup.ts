@@ -2,8 +2,8 @@ import { type EventRequestDTO } from '@/core/app/messages/types'
 import Embedded from '@/core/app/embedded'
 import { buildURL } from '@/utils/safeURLBuilder'
 
-const POPUP_WIDTH = 420
-const POPUP_HEIGHT = 540
+const POPUP_WIDTH = 620
+const POPUP_HEIGHT = 740
 
 export default class Popup extends Embedded {
 	private _popup: Window | null = null
@@ -16,7 +16,7 @@ export default class Popup extends Embedded {
 		const top = (window.innerHeight - POPUP_HEIGHT) / 2 + window.screenY
 		const popup = window.open(
 			url,
-			'Smart Wallet',
+			'Smart Checkout',
 			`width=${POPUP_WIDTH}, height=${POPUP_HEIGHT}, left=${left}, top=${top}`
 		)
 		if (!popup) {
