@@ -1,0 +1,37 @@
+{
+  "name": "@cometh/checkout-sdk-react",
+  "version": "0.1.0",
+  "author": "Cometh",
+  "description": "Cometh Checkout SDK for React",
+  "private": false,
+  "repository": "https://github.com/cometh-hq/checkout-sdk.git",
+  "license": "ISC",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "/dist"
+  ],
+  "exports": [
+    {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  ],
+  "scripts": {
+    "build": "tsup --splitting",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@cometh/checkout-sdk": "^0.1.0",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3"
+  }
+}
