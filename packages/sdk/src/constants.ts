@@ -1,2 +1,2 @@
-export const CHECKOUT_APP_URI = 'https://checkout-portal.cometh.io'
-export const CHECKOUT_API_URI = 'https://checkout.cometh.io/v1'
+export const CHECKOUT_APP_URI = 'https://checkout.cometh.io'
+export const CHECKOUT_API_URI = 'https://api.checkout.cometh.io/v1'

@@ -1,4 +1,5 @@
 import {type EventRequestDTO, EventType, type MessageEventResp} from './messages/types'
+import {urlOriginEquals} from "@/utils/safeURL";
 
 export interface EmbeddedConfiguration {
     defaultURL: string
@@ -21,7 +22,7 @@ export default abstract class Embedded {
     async waitMessage<T>(type: EventType): Promise<T> {
         return new Promise((resolve, reject) => {
             const handler = (event: MessageEventResp) => {
-                if (event.origin !== this._config.authorizedOrigin) {
+                if (!urlOriginEquals(event.origin, this._config.authorizedOrigin)) {
                     console.log('wrong origin: ', event)
                     return
                 }

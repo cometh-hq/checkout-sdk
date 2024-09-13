@@ -1,5 +1,5 @@
 import {type CheckoutConfiguration, DisplayMode} from '@/configuration'
-import {buildURL} from '@/utils/safeURLBuilder'
+import {buildURL} from '@/utils/safeURL'
 import DisplayableFlow from "@/core/app/DisplayableFlow";
 import {CHECKOUT_API_URI, CHECKOUT_APP_URI} from "@/constants";
 import type {CheckoutParameters} from "@/types";

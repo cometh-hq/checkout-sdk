@@ -1,6 +1,6 @@
 import {type EventRequestDTO} from './messages/types'
 import Embedded from './embedded'
-import {buildURL} from '@/utils/safeURLBuilder'
+import {buildURL} from '@/utils/safeURL'
 
 export default class IFrame extends Embedded {
     private _modalID = 'modal-cometh-web-checkout'

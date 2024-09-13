@@ -1,6 +1,6 @@
 import { type EventRequestDTO } from '@/core/app/messages/types'
 import Embedded from '@/core/app/embedded'
-import { buildURL } from '@/utils/safeURLBuilder'
+import { buildURL } from '@/utils/safeURL'
 
 export default class Tab extends Embedded {
 	private _tab: Window | null = null
