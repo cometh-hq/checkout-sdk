@@ -45,9 +45,6 @@ export default class IFrame extends Embedded {
         const iframe = document.createElement('iframe')
         iframe.id = this._iframeID
         iframe.allow = ''
-        iframe.sandbox.add('allow-forms')
-        iframe.sandbox.add('allow-scripts')
-        iframe.sandbox.add('allow-same-origin')
         iframe.style.width = '100%'
         iframe.style.height = '100%'
         this._iframe = iframe
