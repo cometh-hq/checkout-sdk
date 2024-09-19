@@ -1,5 +1,5 @@
 {
-  "name": "@cometh/checkout-sdk-react",
+  "name": "@cometh/checkout-react",
   "version": "1.0.0",
   "author": "Cometh",
   "description": "Cometh Checkout SDK for React",
@@ -26,7 +26,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@cometh/checkout-sdk": "^2.0.0",
+    "@cometh/checkout": "file:.yalc/@cometh/checkout",
     "react": "^18.3.1"
   },
   "devDependencies": {

@@ -4,7 +4,7 @@ import CheckoutSDK, {
     type CheckoutError,
     CheckoutEvents,
     type CheckoutSuccess
-} from '@cometh/checkout-sdk'
+} from '@cometh/checkout'
 
 export default function useCheckout(apiKey: string, configuration?: CheckoutConfiguration) {
     const [sdk, setSdk] = useState<CheckoutSDK>()

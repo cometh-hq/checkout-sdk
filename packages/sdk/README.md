@@ -11,7 +11,7 @@ npm install @cometh/checkout-sdk
 1. Initialize SDK
 
 ```typescript
-import {CheckoutSDK} from '@cometh/checkout-sdk'
+import {CheckoutSDK} from '@cometh/checkout'
 
 const sdk = new CheckoutSDK(apiKey)
 ```
@@ -33,7 +33,7 @@ await sdk.checkout(request)
 3. Handle flow events
 
 ```ts
-import {CheckoutSDK, CheckoutError, CheckoutSuccess, CheckoutEvents} from '@cometh/checkout-sdk'
+import {CheckoutSDK, CheckoutError, CheckoutSuccess, CheckoutEvents} from '@cometh/checkout'
 
 const sdk = new CheckoutSDK(apiKey)
 sdk.on(CheckoutEvents.START, () => {

@@ -3,7 +3,7 @@
 #### Installing Checkout SDK
 
 ```bash
-npm install @cometh/checkout-sdk-react
+npm install @cometh/checkout-react
 ```
 
 ### Basic Usage
@@ -11,7 +11,7 @@ npm install @cometh/checkout-sdk-react
 1. Initialize SDK
 
 ```typescript
-import {useCheckout} from '@cometh/checkout-sdk-react'
+import {useCheckout} from '@cometh/checkout-react'
 
 const {startCheckout, success, error} = useCheckout(apiKey)
 ```
